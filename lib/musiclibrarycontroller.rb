@@ -105,7 +105,7 @@ class MusicLibraryController
     input = gets.strip.to_i
     if (1..Song.all.length).include?(input)
       sorted= Song.all.sort_by {|song| song.name}
-      song = sorted[input]
+      song = sorted[input-1]
     end
     
 
